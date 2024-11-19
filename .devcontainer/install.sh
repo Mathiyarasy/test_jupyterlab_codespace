@@ -16,7 +16,8 @@ PYTHON_INSTALL_PATH="${INSTALLPATH:-"/usr/local/python"}"
 OVERRIDE_DEFAULT_VERSION="${OVERRIDEDEFAULTVERSION:-"true"}"
 
 export PIPX_HOME=${PIPX_HOME:-"/usr/local/py-utils"}
-
+echo $PATH
+echo "Inside this new install.sh"
 USERNAME="vscode"
 export USERNAME="vscode"
 UPDATE_RC="${UPDATE_RC:-"true"}"
