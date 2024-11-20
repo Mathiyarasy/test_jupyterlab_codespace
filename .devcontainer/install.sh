@@ -8,7 +8,7 @@
 # Maintainer: The VS Code and Codespaces Teams
 
 PYTHON_VERSION="${VERSION:-"latest"}" # 'system' or 'os-provided' checks the base image first, else installs 'latest'
-INSTALL_PYTHON_TOOLS="${INSTALLTOOLS:-"true"}"
+INSTALL_PYTHON_TOOLS="${INSTALLTOOLS:-"false"}"
 SKIP_VULNERABILITY_PATCHING="${SKIPVULNERABILITYPATCHING:-"false"}"
 OPTIMIZE_BUILD_FROM_SOURCE="${OPTIMIZE:-"false"}"
 ENABLE_SHARED_FROM_SOURCE="${ENABLESHARED:-"false"}"
@@ -21,7 +21,7 @@ USERNAME="${USERNAME:-"${_REMOTE_USER:-"automatic"}"}"
 UPDATE_RC="${UPDATE_RC:-"true"}"
 USE_ORYX_IF_AVAILABLE="${USEORYXIFAVAILABLE:-"true"}"
 
-INSTALL_JUPYTERLAB="${INSTALLJUPYTERLAB:-"false"}"
+INSTALL_JUPYTERLAB="${INSTALLJUPYTERLAB:-"true"}"
 CONFIGURE_JUPYTERLAB_ALLOW_ORIGIN="${CONFIGUREJUPYTERLABALLOWORIGIN:-""}"
 
 # Comma-separated list of python versions to be installed
