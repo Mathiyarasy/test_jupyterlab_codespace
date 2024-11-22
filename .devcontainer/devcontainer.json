@@ -1,18 +1,16 @@
 {
-  "name": "Only Jupyter",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-  "remoteUser": "vscode",
-  "hostRequirements": {
-    "cpus": 4
-  },
-  "features": {
-    "ghcr.io/devcontainers/features/python": {
-      "version": "3.10",
-      "installJupyterlab": true,
-      "configureJupyterlabAllowOrigin": "*"
-    }
-  },
-  "containerEnv": {
-    "PATH": "/home/vscode/.local/bin:${containerEnv:PATH}"
-  }
+	"name": "Only Jupyter",
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+	"hostRequirements": {
+	  "cpus": 4
+	},
+	"features": {
+	  "ghcr.io/devcontainers/features/python": {
+		"version": "3.10",
+		"installJupyterlab": true,
+		"configureJupyterlabAllowOrigin": "*"
+	  }
+	},
+	"containerUser": "vscode",
+	"onCreateCommand": "NEW_PATH='/home/vscode/.local/bin'; CURRENT_PATH=$(grep -E '^PATH=' /etc/environment | tail -n 1 | cut -d '\"' -f 2); UPDATED_PATH=\"${NEW_PATH}:${CURRENT_PATH}\"; sudo sed -i \"s|^PATH=.*|PATH=\\\"${UPDATED_PATH}\\\"|\" /etc/environment"
 }
