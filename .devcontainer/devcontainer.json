@@ -1,6 +1,7 @@
 {
   "name": "Only Jupyter",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "remoteUser": "vscode",
   "hostRequirements": {
     "cpus": 4
   },
