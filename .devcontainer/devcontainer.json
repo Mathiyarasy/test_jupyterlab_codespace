@@ -12,5 +12,5 @@
 	  }
 	},
 	"containerUser": "vscode",
-	"onCreateCommand": "NEW_PATH='/home/vscode/.local/bin'; CURRENT_PATH=$(grep -E '^PATH=' /etc/environment | tail -n 1 | cut -d '\"' -f 2); UPDATED_PATH=\"${NEW_PATH}:${CURRENT_PATH}\"; sudo sed -i \"s|^PATH=.*|PATH=\\\"${UPDATED_PATH}\\\"|\" /etc/environment"
+	"onCreateCommand": "NEW_PATH='/home/vscode/.local/bin'; CURRENT_PATH=$(grep -E '^PATH=' /etc/environment | tail -n 1 | cut -d '\"' -f 2); UPDATED_PATH=\"${NEW_PATH}:${CURRENT_PATH}\"; sudo sed -i \"s|^PATH=.*|PATH=\\\"${UPDATED_PATH}\\\"|\" /etc/environment  && source /etc/environment"
 }
