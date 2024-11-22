@@ -12,7 +12,7 @@
       "configureJupyterlabAllowOrigin": "*"
     }
   },
-  "remoteEnv": {
+  "containerEnv": {
     "PATH": "/home/vscode/.local/bin:${containerEnv:PATH}"
   }
 }
