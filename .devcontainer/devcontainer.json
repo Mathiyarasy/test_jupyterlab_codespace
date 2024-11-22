@@ -1,6 +1,7 @@
 {
   "name": "Only Jupyter",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "image": "mcr.microsoft.com/devcontainers/universal:latest",
+  "remoteUser": "vscode",
   "hostRequirements": {
     "cpus": 4
   },
@@ -10,9 +11,5 @@
       "installJupyterlab": true,
       "configureJupyterlabAllowOrigin": "*"
     }
-  },
-  "containerEnv": {
-            // testing
-            "PATH" : "/home/vscode/.local/bin:/usr/local/python/current/bin:/usr/local/py-utils/bin:/usr/local/python/current/bin:/usr/local/py-utils/bin:/usr/local/share/nvm/current/bin:/usr/local/bin:/usr/local/python/current/bin:/usr/local/py-utils/bin:/usr/local/python/current/bin:/usr/local/py-utils/bin:/usr/local/share/nvm/current/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/vscode/.local/bin"
-    }
+  }
 }
